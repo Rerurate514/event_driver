@@ -1,7 +1,7 @@
 name: event_driver
-description: "A new Flutter package project."
+description: "event driven"
 version: 0.0.1
-homepage:
+homepage: https://github.com/Rerurate514/event_driver
 
 environment:
   sdk: ^3.7.2
