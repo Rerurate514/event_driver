@@ -35,7 +35,7 @@ part of '$libraryName.dart';
           
           values.add('''
 // ignore: non_constant_identifier_names
-void _register${className}_${methodName}(${className} instance) {
+void _register${className}_$methodName($className instance) {
   EventDriver().registerHandler('$eventName', 
     ($parameterList) => instance.$methodName($argumentList));
 }
