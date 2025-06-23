@@ -1,14 +1,14 @@
 targets:
   $default:
     builders:
-      your_package_name|event_builder:
+      event_driver:event_builder:
         enabled: true
 
 builders:
   event_builder:
     import: "package:event_driver/builder.dart"
     builder_factories: ["eventBuilder"]
-    build_extensions: {".dart": [".g.part"]}
+    build_extensions: {".dart": [".event.dart"]}
     auto_apply: dependents
     build_to: source
     applies_builders: ["source_gen|combining_builder"]
