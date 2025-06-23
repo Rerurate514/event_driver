@@ -1,6 +1,3 @@
-import 'package:event_driver/annotations.dart';
-import 'package:flutter_test/flutter_test.dart';
-
 import 'package:event_driver/event_driver.dart';
 import 'my_service.dart';
 

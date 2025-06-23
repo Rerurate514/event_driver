@@ -1,7 +1,7 @@
 import 'package:event_driver/annotations.dart';
 import 'package:event_driver/event_driver.dart';
 
-part 'my_service.g.dart';
+part 'my_service.event.dart';
 
 class MyService {
   @Event("buttonPushed")
