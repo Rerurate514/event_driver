@@ -4,8 +4,8 @@ import 'order_service.dart' as os;
 
 void main() {
   // すべてのイベントハンドラを登録
-  ms.EventRegistry.registerAll();
-  os.EventRegistry.registerAll();
+  ms.MyServiceEventRegistry.registerAll();
+  os.OrderServiceEventRegistry.registerAll();
   
   // イベントを発火
   EventDriver().call("buttonPushed", ["login_button"]);
