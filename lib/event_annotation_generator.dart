@@ -46,14 +46,14 @@ void _register${className}_$methodName($className instance) {
     
     if (values.isEmpty) return '';
 
-  final className = libraryName.split("_").map((str) => 
+  final fileName = libraryName.split("_").map((str) => 
     "${str[0].toUpperCase()}${str.substring(1)}"
   ).join("");
     
     return '''
 ${values.join('\n')}
 
-class ${className}EventRegistry {
+class ${fileName}EventRegistry {
   static void registerAll() {
     ${library.classes.map((className) => 
       className.methods.where((method) => _getEventAnnotation(method) != null)
