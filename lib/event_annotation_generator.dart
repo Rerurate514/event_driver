@@ -53,9 +53,9 @@ ${values.join('\n')}
 
 class EventRegistry {
   static void registerAll() {
-    ${library.classes.map((cls) => 
-      cls.methods.where((m) => _getEventAnnotation(m) != null)
-         .map((m) => '_register${cls.name}_${m.name}(${cls.name}());')
+    ${library.classes.map((className) => 
+      className.methods.where((method) => _getEventAnnotation(method) != null)
+         .map((method) => '_register${className.name}_${method.name}(${className.name}());')
          .join('\n    ')
     ).join('\n    ')}
   }
